@@ -15,7 +15,7 @@ class RandomWalk:
         return self.timestep
 
     def step(self):
-        self.get_curpos()
+        raise NotImplementedError()
 
     # simply step n times
     def nstep(self, n):

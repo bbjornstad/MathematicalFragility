@@ -1,12 +1,12 @@
 from randomwalk import RandomWalk
-from numpy import random, exp, fabs
+from numpy import random, exp
 
 class BirthDeath(RandomWalk):
     def __init__(self, init_pos, init_time):
         super().__init__(init_pos, init_time)
         
     def step(self):
-        if(random.random() <= self.computeForwardProb()):
+        if(random.random() <= self.forward_prob):
             self.curpos += 1
         else:
             self.curpos -= 1
@@ -15,12 +15,14 @@ class BirthDeath(RandomWalk):
         self.timestep += 1
         self.poslist.append(self.curpos)
         
-    def computeForwardProb(self):
-        stub = 1 / (2 + exp(-fabs(self.curpos)))
+    @property
+    def forward_prob(self):
+        alpha = 1 / (2 + exp(-abs(self.curpos)))
         if(self.curpos >= 0):
-            return stub
+            return alpha
         else:
-            return (1 - stub)
+            return (1 - alpha)
+        
 
 
 sim = BirthDeath(0, 0)

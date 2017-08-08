@@ -7,7 +7,7 @@ class BirthDeath(RandomWalk):
         self.alpha = alpha
 
     def step(self):
-        if(random.random() <= self.computeForwardProb()):
+        if(random.random() <= self.forward_prob):
             self.curpos += 1
         else:
             self.curpos -= 1
@@ -16,13 +16,18 @@ class BirthDeath(RandomWalk):
         self.timestep += 1
         self.poslist.append(self.curpos)
 
-    def computeForwardProb(self):
+
+    @property
+    def forward_prob(self):
         # if we are past the origin, alpha should be the cutoff
         if(self.curpos >= 0):
             return self.alpha
+
         # otherwise, 1-alpha should be the cutoff
         else:
             return (1 - self.alpha)
+
+
 
 
 sim = BirthDeath(0, 0, 0.5)
