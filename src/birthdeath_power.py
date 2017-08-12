@@ -1,9 +1,10 @@
 from randomwalk import RandomWalk
-from numpy import random, sqrt
+from numpy import random, sqrt, power
 
-class BirthDeath(RandomWalk):
-    def __init__(self, init_pos, init_time):
+class BirthDeathPower(RandomWalk):
+    def __init__(self, init_pos, init_time, power):
         super().__init__(init_pos, init_time)
+        self.power = power
 
     def step(self):
         if(random.random() <= self.forward_prob):
@@ -17,16 +18,8 @@ class BirthDeath(RandomWalk):
 
     @property
     def forward_prob(self):
-        alpha = 1 / (2 + (1 / sqrt(1 + abs(self.curpos))))
+        alpha = 1 / (2 + power((1 + abs(self.curpos)), -self.power))
         if(self.curpos >= 0):
             return alpha
         else:
             return (1 - alpha)
-
-sim = BirthDeath(0,0)
-sim.nstep(1000000)
-print(sim.get_poslist().count(0))
-sim.nstep(1000000)
-print(sim.get_poslist().count(0))
-sim.nstep(1000000)
-print(sim.get_poslist().count(0))
