@@ -1,57 +1,67 @@
 from birthdeath_power import BirthDeathPower
-from numpy import mean, std, arange, matrix
+from numpy import mean, std, arange
 import matplotlib.pyplot as plt
 
+# here, we utilize the BirthDeathPower class (derived from RandomWalk)
+# to run a simulation of a birth and death simulation using the
+# specified probability distributions. we loop through a range of 
+# beta values which will serve as the exponents in the distribution,
+# and do statistical analysis on the return times. we then plot the results.
+
 # set some indices
-p_recurrences = []
-p_means = []
-p_stds = []
+recurrences = []
+# holds the mean return times by
+mean_return_times = []
+std_return_times = []
 
-# make a range of p values
-min_p = 0.0000
-max_p = 10.0
-p_step = 0.0001
-p_vals = arange(min_p, max_p, p_step)
+# make a range of beta values
+min_beta = 0.000
+max_beta = 5.0
+beta_step = 0.0025
+beta_vals = arange(min_beta, max_beta, beta_step)
 
-
-
-for p in p_vals:
-    sim = BirthDeathPower(0,0,p)
+for beta in beta_vals:
+    sim = BirthDeathPower(0,0,beta)
     sim.nstep(1000000)
-    p_recurrences.append(sim.get_poslist().count(0))
-    # compute the mean position and standard deviation of position
-    cur_mean = mean(sim.get_poslist())
-    cur_std = std(sim.get_poslist())
-    p_means.append(cur_mean)
-    p_stds.append(cur_std)
+    recurrences.append(sim.num_recurrences)
+    # append the mean return time and standard deviation of return times
+    # we first need to check if the list is empty or not, if it is we
+    # must handle the scenario in which the walk did not recur.
+    if(len(sim.return_times) != 0):
+        cur_mean = mean(sim.return_times)
+        cur_std = std(sim.return_times)
+        mean_return_times.append(cur_mean)
+        std_return_times.append(cur_std)
+    else:
+        # in this case, the walk never recurred
+        mean_return_times.append(0)
+        std_return_times.append(0)
 
 # do some plotting
-n_bins = 250
+n_bins = 30
 plt.figure(1)
-plt.plot(p_vals, p_means, 'ro')
-plt.plot(p_vals, p_stds, 'bo')
-plt.xlabel('p values')
-plt.ylabel('mean position and std')
-plt.legend(labels=['mean', 'std'])
-plt.suptitle('mean and std by p value')
+plt.plot(beta_vals, mean_return_times, 'ro-')
+plt.xlabel('beta values')
+plt.ylabel('mean return time')
+plt.suptitle('mean return time vs choice of beta')
 
 plt.figure(2)
-plt.hist(p_means, bins = n_bins, normed=False)
-plt.xlabel('mean position')
-plt.ylabel('number of p vals')
-plt.suptitle('mean position histogram (%d bins)' % n_bins)
+plt.plot(beta_vals, std_return_times, 'bo-')
+plt.xlabel('beta values')
+plt.ylabel('std of return time')
+plt.suptitle('std of return time vs choice of beta')
 
 plt.figure(3)
-plt.hist(p_means, bins = n_bins, normed=False, cumulative=True)
-plt.xlabel('mean position')
-plt.ylabel('number of p vals (cumulative)')
-plt.suptitle('mean position cumulative histogram (%d bins)' % n_bins)
+plt.hist(mean_return_times, bins = n_bins, normed=False)
+plt.xlabel('mean return time')
+plt.ylabel('number of beta vals')
+plt.suptitle('mean return time histogram (%d bins)' % n_bins)
 
 plt.figure(4)
-plt.hist2d(p_vals, p_means, bins = n_bins)
-plt.xlabel('p vals')
-plt.ylabel('mean position')
+plt.hist2d(beta_vals, mean_return_times, bins = n_bins)
+plt.xlabel('beta vals')
+plt.ylabel('mean return time')
 plt.colorbar()
-plt.suptitle('mean position and p-value 2d histogram (%d bins)' % n_bins)
+plt.suptitle('mean return time 2d histogram - vs beta values (%d bins)' % n_bins)
 
 plt.show()

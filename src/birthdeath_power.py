@@ -6,7 +6,7 @@ class BirthDeathPower(RandomWalk):
         super().__init__(init_pos, init_time)
         self.power = power
 
-    def step(self):
+    def _step(self):
         if(random.random() <= self.forward_prob):
             self.curpos += 1
         else:
