@@ -1,5 +1,5 @@
 from randomwalk import RandomWalk
-from numpy import random, sqrt, power
+from numpy import random, power
 
 class BirthDeathPower(RandomWalk):
     def __init__(self, init_pos, init_time, power):

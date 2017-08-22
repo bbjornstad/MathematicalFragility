@@ -20,22 +20,24 @@ max_beta = 5.0
 beta_step = 0.0025
 beta_vals = arange(min_beta, max_beta, beta_step)
 
+iterations = 1000000
+
 for beta in beta_vals:
     sim = BirthDeathPower(0,0,beta)
-    sim.nstep(1000000)
+    sim.nstep(iterations)
     recurrences.append(sim.num_recurrences)
     # append the mean return time and standard deviation of return times
     # we first need to check if the list is empty or not, if it is we
     # must handle the scenario in which the walk did not recur.
-    if(len(sim.return_times) != 0):
-        cur_mean = mean(sim.return_times)
-        cur_std = std(sim.return_times)
+    if(len(sim.hitting_times) != 0):
+        cur_mean = mean(sim.hitting_times)
+        cur_std = std(sim.hitting_times)
         mean_return_times.append(cur_mean)
         std_return_times.append(cur_std)
     else:
         # in this case, the walk never recurred
-        mean_return_times.append(0)
-        std_return_times.append(0)
+        mean_return_times.append(iterations)
+        std_return_times.append(iterations)
 
 # do some plotting
 n_bins = 30
