@@ -23,8 +23,8 @@ class BirthDeathPowerVarStep(RandomWalk):
         if(self.curpos == 0):
             return (1/2)
         elif(self.curpos > 0):
-            alpha = 1 / (2 + power(abs(self.curpos), -self.power))
+            alpha = 1 / (2 + abs(self.curpos)**-self.power)
             return alpha
         else:
-            alpha = 1 / (2 + power(abs(self.curpos), -self.power))
+            alpha = 1 / (2 + abs(self.curpos)**-self.power)
             return (1 - alpha)
