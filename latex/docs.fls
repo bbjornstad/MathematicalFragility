@@ -384,6 +384,8 @@ INPUT /usr/share/texmf-dist/tex/latex/fp/fp-upn.sty
 INPUT /usr/share/texmf-dist/tex/latex/fp/fp-upn.sty
 INPUT /usr/share/texmf-dist/tex/latex/fp/fp-eval.sty
 INPUT /usr/share/texmf-dist/tex/latex/fp/fp-eval.sty
+INPUT /usr/share/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/share/texmf-dist/tex/latex/float/float.sty
 INPUT /usr/share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.external.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.external.code.tex
 INPUT /usr/share/texmf-dist/tex/latex/pgf/frontendlayer/libraries/tikzlibraryexternal.code.tex
@@ -513,7 +515,9 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/mathdesign/mdbch/mdbchr8t.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm1095.tfm
 INPUT /usr/share/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 INPUT /usr/share/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+INPUT plots/plot1.png
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/avantgar/pagk8t.tfm
+INPUT plots/plot2.png
 INPUT /usr/share/texmf-dist/fonts/tfm/public/mathdesign/mdbch/mdbchb8t.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/avantgar/pagd8t.tfm
 OUTPUT docs.toc

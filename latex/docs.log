@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Arch Linux) (preloaded format=xelatex 2017.8.6)  22 AUG 2017 15:10
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Arch Linux) (preloaded format=xelatex 2017.8.6)  29 AUG 2017 14:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1654,38 +1654,45 @@ Package: fp-eval 1995/04/03
 \@dtl@read=\read4
 \dtl@entrycr=\count407
 \dtl@omitlines=\count408
+) (/usr/share/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count409
+\float@exts=\toks76
+\float@box=\box101
+\@float@everytoks=\toks77
+\@floatcapt=\box102
 ) (/usr/share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.external.code.tex (/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/libraries/tikzlibraryexternal.code.tex (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzexternalshared.code.tex))
 Package pgfplots external lib: loading complementary code for your PGF version...
 (/usr/share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2015/08/29  (rcs-revision 1.22)
-\pgfexternal@startupbox=\box101
+\pgfexternal@startupbox=\box103
 ) (/usr/share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_tikzlibraryexternal.code.tex (/usr/share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_tikzexternalshared.code.tex)))
 \openout4 = `docs.auxlock'.
 
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \openstax with sig. 'o' on line 120.
+. Defining command \openstax with sig. 'o' on line 122.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \grout with sig. 'o' on line 129.
+. Defining command \grout with sig. 'o' on line 131.
 .................................................
-\c@ccEnumeratei=\count409
-\c@ccEnumerateii=\count410
-\c@ccEnumerateiii=\count411
-\c@ccEnumerateiv=\count412
-\c@ccEnumeratev=\count413
-\c@ccEnumeratevi=\count414
-\c@ccEnumeratevii=\count415
-\c@ccEnumerateviii=\count416
-\c@ccEnumerateix=\count417
-\enitdp@ccEnumerate=\count418
+\c@ccEnumeratei=\count410
+\c@ccEnumerateii=\count411
+\c@ccEnumerateiii=\count412
+\c@ccEnumerateiv=\count413
+\c@ccEnumeratev=\count414
+\c@ccEnumeratevi=\count415
+\c@ccEnumeratevii=\count416
+\c@ccEnumerateviii=\count417
+\c@ccEnumerateix=\count418
+\enitdp@ccEnumerate=\count419
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \prob with sig. 'o' on line 153.
+. Defining command \prob with sig. 'o' on line 155.
 .................................................
 
 
@@ -1708,13 +1715,13 @@ Sidefoothsep and sidefootwidth: 7pt and 111pt
 Sidefootvsep and sidefootheight: 13.6pt and 539.9202pt
 ******************************************************
 
-\c@notation=\count419
-\c@dummy=\count420
-\c@problem=\count421
-\c@exerciseT=\count422
-\c@exampleT=\count423
-\c@vocabulary=\count424
-\c@definitionT=\count425
+\c@notation=\count420
+\c@dummy=\count421
+\c@problem=\count422
+\c@exerciseT=\count423
+\c@exampleT=\count424
+\c@vocabulary=\count425
+\c@definitionT=\count426
 (/usr/share/texmf-dist/tex/latex/mdframed/mdframed.sty
 Package: mdframed 2013/07/01 1.9b: mdframed
  (/usr/share/texmf-dist/tex/latex/oberdiek/zref-abspage.sty
@@ -1725,11 +1732,11 @@ Package zref Info: New property list: main on input line 759.
 Package zref Info: New property: default on input line 760.
 Package zref Info: New property: page on input line 761.
 )
-\c@abspage=\count426
+\c@abspage=\count427
 Package zref Info: New property: abspage on input line 62.
 )
 \mdf@templength=\skip268
-\c@mdf@globalstyle@cnt=\count427
+\c@mdf@globalstyle@cnt=\count428
 \mdf@skipabove@length=\skip269
 \mdf@skipbelow@length=\skip270
 \mdf@leftmargin@length=\skip271
@@ -1772,11 +1779,11 @@ Package zref Info: New property: abspage on input line 62.
  (/usr/share/texmf-dist/tex/latex/mdframed/md-frame-0.mdf
 File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 )
-\mdf@frametitlebox=\box102
-\mdf@footnotebox=\box103
-\mdf@splitbox@one=\box104
-\mdf@splitbox@two=\box105
-\mdf@splitbox@save=\box106
+\mdf@frametitlebox=\box104
+\mdf@footnotebox=\box105
+\mdf@splitbox@one=\box106
+\mdf@splitbox@two=\box107
+\mdf@splitbox@save=\box108
 \mdfsplitboxwidth=\skip308
 \mdfsplitboxtotalwidth=\skip309
 \mdfsplitboxheight=\skip310
@@ -1804,7 +1811,7 @@ File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 \mdf@horizontalspaceofbox=\skip332
 \mdfsubtitleheight=\skip333
 \mdfsubsubtitleheight=\skip334
-\c@mdfcountframes=\count428
+\c@mdfcountframes=\count429
 
 ****** mdframed patching \endmdf@trivlist
 
@@ -1820,14 +1827,14 @@ File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 . 
 . Defining command \mdtheorem with sig. ' O{} m o m o ' on line 701.
 .................................................
-\mdf@envdepth=\count429
-\c@mdf@env@i=\count430
-\c@mdf@env@ii=\count431
-\c@mdf@zref@counter=\count432
+\mdf@envdepth=\count430
+\c@mdf@env@i=\count431
+\c@mdf@env@ii=\count432
+\c@mdf@zref@counter=\count433
 Package zref Info: New property: mdf@pagevalue on input line 895.
 ) (/usr/share/texmf-dist/tex/latex/lipsum/lipsum.sty
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
-\c@lips@count=\count433
+\c@lips@count=\count434
 )
 
 LaTeX Warning: Unused global option(s):
@@ -1836,38 +1843,38 @@ LaTeX Warning: Unused global option(s):
 (./docs.aux)
 \openout1 = `docs.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 564.
-LaTeX Font Info:    ... okay on input line 564.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 564.
-LaTeX Font Info:    ... okay on input line 564.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 564.
-LaTeX Font Info:    ... okay on input line 564.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 564.
-LaTeX Font Info:    ... okay on input line 564.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 564.
-LaTeX Font Info:    ... okay on input line 564.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 564.
-LaTeX Font Info:    ... okay on input line 564.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 564.
-LaTeX Font Info:    ... okay on input line 564.
-LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 564.
-LaTeX Font Info:    Try loading font information for MDA+cmr on input line 564.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 566.
+LaTeX Font Info:    ... okay on input line 566.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 566.
+LaTeX Font Info:    ... okay on input line 566.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 566.
+LaTeX Font Info:    ... okay on input line 566.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 566.
+LaTeX Font Info:    ... okay on input line 566.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 566.
+LaTeX Font Info:    ... okay on input line 566.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 566.
+LaTeX Font Info:    ... okay on input line 566.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 566.
+LaTeX Font Info:    ... okay on input line 566.
+LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 566.
+LaTeX Font Info:    Try loading font information for MDA+cmr on input line 566.
  (/usr/share/texmf-dist/tex/latex/mathdesign/mdacmr.fd
 File: mdacmr.fd 
 )
-LaTeX Font Info:    ... okay on input line 564.
-LaTeX Font Info:    Checking defaults for MDB/cmr/m/n on input line 564.
-LaTeX Font Info:    Try loading font information for MDB+cmr on input line 564.
+LaTeX Font Info:    ... okay on input line 566.
+LaTeX Font Info:    Checking defaults for MDB/cmr/m/n on input line 566.
+LaTeX Font Info:    Try loading font information for MDB+cmr on input line 566.
  (/usr/share/texmf-dist/tex/latex/mathdesign/mdbcmr.fd
 File: mdbcmr.fd 
 )
-LaTeX Font Info:    ... okay on input line 564.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 564.
-LaTeX Font Info:    ... okay on input line 564.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 564.
-LaTeX Font Info:    ... okay on input line 564.
+LaTeX Font Info:    ... okay on input line 566.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 566.
+LaTeX Font Info:    ... okay on input line 566.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 566.
+LaTeX Font Info:    ... okay on input line 566.
 Package polyglossia Info: Option: english variant=american.
-LaTeX Info: Redefining \microtypecontext on input line 564.
+LaTeX Info: Redefining \microtypecontext on input line 566.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: No adjustment of tracking.
@@ -1876,21 +1883,21 @@ Package microtype Info: No adjustment of kerning.
  (/usr/share/texmf-dist/tex/latex/microtype/mt-bch.cfg
 File: mt-bch.cfg 2007/03/03 v1.5 microtype config. file: Bitstream Charter (RS)
 )
-\AtBeginShipoutBox=\box107
-Package hyperref Info: Link coloring OFF on input line 564.
+\AtBeginShipoutBox=\box109
+Package hyperref Info: Link coloring OFF on input line 566.
  (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  (/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count434
+\c@section@level=\count435
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 564.
-LaTeX Info: Redefining \ref on input line 564.
-LaTeX Info: Redefining \pageref on input line 564.
-LaTeX Info: Redefining \nameref on input line 564.
+LaTeX Info: Redefining \nameref on input line 566.
+LaTeX Info: Redefining \ref on input line 566.
+LaTeX Info: Redefining \pageref on input line 566.
+LaTeX Info: Redefining \nameref on input line 566.
 (./docs.out) (./docs.out)
 \@outlinefile=\write8
 \openout8 = `docs.out'.
@@ -1899,8 +1906,8 @@ LaTeX Info: Redefining \nameref on input line 564.
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.15} (current compat level: 1.12).
 
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 19.91054pt on input line 571.
-LaTeX Font Info:    Try loading font information for T1+pag on input line 571.
+(Font)              scaled to size 19.91054pt on input line 573.
+LaTeX Font Info:    Try loading font information for T1+pag on input line 573.
 (/usr/share/texmf-dist/tex/latex/psnfss/t1pag.fd
 File: t1pag.fd 2001/06/04 font definitions for T1/pag.
 )
@@ -1909,117 +1916,117 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <20.74> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 571.
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 573.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <24.88> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 571.
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 573.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <17.28> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 571.
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 573.
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 23.88496pt on input line 571.
+(Font)              scaled to size 23.88496pt on input line 573.
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 571.
-LaTeX Font Info:    Try loading font information for OT1+mdbch on input line 571.
+(Font)              scaled to size 11.52008pt on input line 573.
+LaTeX Font Info:    Try loading font information for OT1+mdbch on input line 573.
  (/usr/share/texmf-dist/tex/latex/mathdesign/mdbch/ot1mdbch.fd
 File: ot1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OT1/mdbch.
 )
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 571.
+(Font)              scaled to size 11.52008pt on input line 573.
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 571.
+(Font)              scaled to size 7.68005pt on input line 573.
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 571.
-LaTeX Font Info:    Try loading font information for OML+mdbch on input line 571.
+(Font)              scaled to size 5.76004pt on input line 573.
+LaTeX Font Info:    Try loading font information for OML+mdbch on input line 573.
  (/usr/share/texmf-dist/tex/latex/mathdesign/mdbch/omlmdbch.fd
 File: omlmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OML/mdbch.
 )
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 11.52008pt on input line 571.
+(Font)              scaled to size 11.52008pt on input line 573.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 7.68005pt on input line 571.
+(Font)              scaled to size 7.68005pt on input line 573.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 5.76004pt on input line 571.
-LaTeX Font Info:    Try loading font information for OMS+mdbch on input line 571.
+(Font)              scaled to size 5.76004pt on input line 573.
+LaTeX Font Info:    Try loading font information for OMS+mdbch on input line 573.
  (/usr/share/texmf-dist/tex/latex/mathdesign/mdbch/omsmdbch.fd
 File: omsmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OMS/mdbch.
 )
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 571.
+(Font)              scaled to size 11.52008pt on input line 573.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 571.
+(Font)              scaled to size 7.68005pt on input line 573.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 571.
-LaTeX Font Info:    Try loading font information for OMX+mdbch on input line 571.
+(Font)              scaled to size 5.76004pt on input line 573.
+LaTeX Font Info:    Try loading font information for OMX+mdbch on input line 573.
  (/usr/share/texmf-dist/tex/latex/mathdesign/mdbch/omxmdbch.fd
 File: omxmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OMX/mdbch.
 )
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 571.
+(Font)              scaled to size 11.52008pt on input line 573.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 571.
+(Font)              scaled to size 7.68005pt on input line 573.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 571.
+(Font)              scaled to size 5.76004pt on input line 573.
 LaTeX Font Info:    Font shape `OMS/xmdcmsy/m/n' will be
-(Font)              scaled to size 11.31592pt on input line 571.
+(Font)              scaled to size 11.31592pt on input line 573.
 LaTeX Font Info:    Font shape `OMS/xmdcmsy/m/n' will be
-(Font)              scaled to size 7.54395pt on input line 571.
+(Font)              scaled to size 7.54395pt on input line 573.
 LaTeX Font Info:    Font shape `OMS/xmdcmsy/m/n' will be
-(Font)              scaled to size 5.65796pt on input line 571.
+(Font)              scaled to size 5.65796pt on input line 573.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 571.
+(Font)              scaled to size 11.52008pt on input line 573.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 571.
+(Font)              scaled to size 7.68005pt on input line 573.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 571.
-LaTeX Font Info:    Try loading font information for MDA+mdbch on input line 571.
+(Font)              scaled to size 5.76004pt on input line 573.
+LaTeX Font Info:    Try loading font information for MDA+mdbch on input line 573.
  (/usr/share/texmf-dist/tex/latex/mathdesign/mdbch/mdamdbch.fd
 File: mdamdbch.fd 2013/08/29 Fontinst v1.933 font definitions for MDA/mdbch.
 )
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 571.
+(Font)              scaled to size 11.52008pt on input line 573.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 571.
+(Font)              scaled to size 7.68005pt on input line 573.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 571.
-LaTeX Font Info:    Try loading font information for MDB+mdbch on input line 571.
+(Font)              scaled to size 5.76004pt on input line 573.
+LaTeX Font Info:    Try loading font information for MDB+mdbch on input line 573.
  (/usr/share/texmf-dist/tex/latex/mathdesign/mdbch/mdbmdbch.fd
 File: mdbmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for MDB/mdbch.
 )
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 571.
+(Font)              scaled to size 11.52008pt on input line 573.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 571.
+(Font)              scaled to size 7.68005pt on input line 573.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 571.
+(Font)              scaled to size 5.76004pt on input line 573.
 LaTeX Font Info:    Font shape `OT1/mdbch/b/n' will be
-(Font)              scaled to size 11.52008pt on input line 571.
+(Font)              scaled to size 11.52008pt on input line 573.
 LaTeX Font Info:    Font shape `OT1/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 571.
+(Font)              scaled to size 7.68005pt on input line 573.
 LaTeX Font Info:    Font shape `OT1/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 571.
+(Font)              scaled to size 5.76004pt on input line 573.
 LaTeX Font Info:    Font shape `OML/mdbch/b/it' will be
-(Font)              scaled to size 11.52008pt on input line 571.
+(Font)              scaled to size 11.52008pt on input line 573.
 LaTeX Font Info:    Font shape `OML/mdbch/b/it' will be
-(Font)              scaled to size 7.68005pt on input line 571.
+(Font)              scaled to size 7.68005pt on input line 573.
 LaTeX Font Info:    Font shape `OML/mdbch/b/it' will be
-(Font)              scaled to size 5.76004pt on input line 571.
+(Font)              scaled to size 5.76004pt on input line 573.
 LaTeX Font Info:    Font shape `OMS/mdbch/b/n' will be
-(Font)              scaled to size 11.52008pt on input line 571.
+(Font)              scaled to size 11.52008pt on input line 573.
 LaTeX Font Info:    Font shape `OMS/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 571.
+(Font)              scaled to size 7.68005pt on input line 573.
 LaTeX Font Info:    Font shape `OMS/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 571.
+(Font)              scaled to size 5.76004pt on input line 573.
 LaTeX Font Info:    Font shape `OMX/mdbch/b/n' will be
-(Font)              scaled to size 11.52008pt on input line 571.
+(Font)              scaled to size 11.52008pt on input line 573.
 LaTeX Font Info:    Font shape `OMX/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 571.
+(Font)              scaled to size 7.68005pt on input line 573.
 LaTeX Font Info:    Font shape `OMX/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 571.
+(Font)              scaled to size 5.76004pt on input line 573.
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 571.
+(Font)              scaled to size 9.60007pt on input line 573.
 File: resources/cover-render-lines-lowres.png Graphic file (type bmp)
 <resources/cover-render-lines-lowres.png>
 
-Overfull \hbox (3.62pt too wide) in paragraph at lines 571--571
+Overfull \hbox (3.62pt too wide) in paragraph at lines 573--573
  [] 
  []
 
@@ -2089,82 +2096,124 @@ LaTeX Font Warning: Font shape `T1/ul9/m/n' undefined
 
 (/usr/share/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
-) [2]
-Package mdframed Info: mdframed works in twoside mode on input line 88.
+)
+File: plots/plot1.png Graphic file (type bmp)
+<plots/plot1.png>
+
+Overfull \hbox (107.5pt too wide) in paragraph at lines 72--73
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+File: plots/plot2.png Graphic file (type bmp)
+<plots/plot2.png>
+
+Overfull \hbox (107.5pt too wide) in paragraph at lines 84--85
+ [][] 
+ []
+
+[3]
+Package mdframed Info: mdframed works in twoside mode on input line 100.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 88.
+(mdframed)              on input line 100.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 9.60007pt on input line 89.
+(Font)              scaled to size 9.60007pt on input line 101.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 89.
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 101.
 
-Overfull \hbox (1.3172pt too wide) in paragraph at lines 92--95
+Overfull \hbox (1.3172pt too wide) in paragraph at lines 104--107
 \T1/mdbch/m/n/10.95 above. Un-for-tu-nately, the position-dependence of $\OML/mdbch/m/it/10.95 p\OT1/mdbch/m/n/10.95 (\OML/mdbch/m/it/10.95 x\OT1/mdbch/m/n/10.95 )$ \T1/mdbch/m/n/10.95 and $\OML/mdbch/m/it/10.95 q\OT1/mdbch/m/n/10.95 (\OML/mdbch/m/it/10.95 x\OT1/mdbch/m/n/10.95 )$ \T1/mdbch/m/n/10.95 make com-bi-na-toric ap-proaches
  []
 
-Package mdframed Info: mdframed works in twoside mode on input line 111.
+Package mdframed Info: mdframed works in twoside mode on input line 123.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 111.
-Package mdframed Info: mdframed works in twoside mode on input line 122.
+(mdframed)              on input line 123.
+Package mdframed Info: mdframed works in twoside mode on input line 134.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 122.
-Package mdframed Info: mdframed works in twoside mode on input line 128.
+(mdframed)              on input line 134.
+Package mdframed Info: mdframed works in twoside mode on input line 140.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 128.
+(mdframed)              on input line 140.
+[4]
+Package mdframed Info: mdframed works in twoside mode on input line 150.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 150.
+Package mdframed Info: mdframed works in twoside mode on input line 173.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 173.
+Package mdframed Info: mdframed works in twoside mode on input line 181.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 181.
+Package mdframed Info: mdframed works in twoside mode on input line 186.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 186.
+Package mdframed Info: mdframed works in twoside mode on input line 189.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 189.
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
-(mdframed)              on input line 137.
-[3]
-Package mdframed Info: mdframed works in twoside mode on input line 138.
+(mdframed)              on input line 205.
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 205.
+ [5]
+Package mdframed Info: mdframed works in twoside mode on input line 211.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 138.
-Package mdframed Info: mdframed works in twoside mode on input line 161.
+(mdframed)              on input line 211.
+Package mdframed Info: mdframed works in twoside mode on input line 219.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 161.
-Package mdframed Info: mdframed works in twoside mode on input line 169.
+(mdframed)              on input line 219.
+Package mdframed Info: mdframed works in twoside mode on input line 222.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 169.
-Package mdframed Info: mdframed works in twoside mode on input line 174.
+(mdframed)              on input line 222.
+Package mdframed Info: mdframed works in twoside mode on input line 225.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 174.
-Package mdframed Info: mdframed works in twoside mode on input line 177.
+(mdframed)              on input line 225.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 297.
+ [6] [7]
+Package mdframed Info: mdframed works in twoside mode on input line 308.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 177.
- [4]
-Package mdframed Info: mdframed works in twoside mode on input line 208.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 208.
- [5]) [6]
+(mdframed)              on input line 308.
+ [8] [9]) [10]
 \tf@toc=\write9
 \openout9 = `docs.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 580.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 580.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 582.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 582.
  (./docs.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 580.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 580.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 582.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 582.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 52315 strings out of 492998
- 1152681 string characters out of 6139962
- 1547104 words of memory out of 5000000
- 55553 multiletter control sequences out of 15000+600000
+ 52384 strings out of 492998
+ 1153612 string characters out of 6139962
+ 1561630 words of memory out of 5000000
+ 55615 multiletter control sequences out of 15000+600000
  590558 words of font info for 96 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 63i,12n,96p,10363b,521s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,12n,96p,10363b,523s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on docs.xdv (10 pages, 32632 bytes).
+Output written on docs.xdv (14 pages, 46996 bytes).

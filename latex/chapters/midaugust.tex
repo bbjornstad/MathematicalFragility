@@ -66,11 +66,23 @@ Matplotlib's \texttt{pyplot} class. In particular, I used the scatter-plot, hist
 For example, the following plot shows the mean return times of a simulation with $\beta$ values ranging
 from $0$ to $3$ with a step size of $0.005$.
 
+\noindent
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.25\textwidth]{plots/plot1.png}
+\end{figure}
+
 Here, it appears as though the mean return times begin to scatter into higher values shortly after
 $\beta$ grows beyond $1$, thus supporting that the chains may be getting "more lost" more frequently.
 This suggests that the origin in the given birth and death chain may be either null-recurrent or
 transient when $\beta > 1$ and is, in contrast, positive-recurrent when $\beta < 1$. The corresponding
 $2$-dimensional histogram similarly supports this conclusion.
+
+\noindent
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.25\textwidth]{plots/plot2.png}
+\end{figure}
 
 However, this is not evidence enough to support the claim, especially in mathematics where the standard
 of proof lies beyond statistical inference. As such, I turned my attention toward proving the
@@ -193,8 +205,96 @@ Thus, we can prove the following proposition.
 \end{proof}
 
 However, we must still show that the chain is positive-recurrent for values of $\beta < 1$ and
-null-recurrent for values of $\beta \geq 1$.
-
+null-recurrent for values of $\beta \geq 1$. Doing so will involve the use logarithms and approximations
+thereof, as well as a key observation about Riemann sums in relation to corresponding integrals.
+Further, we draw upon a second of Zhong Li's results:
+\begin{proposition}
+    An arbitrary birth and death chain on $\N$ with probability distribution defined by $p(x)$ and
+    $q(x)$ is positive-recurrent if and only if
+    \[
+        \sum_{x=1}^{\infty} \frac{p(0)\, p(1)\, p(2)\, \cdots\, p(x-1)}{q(1)\, q(2)\, q(3)\, \cdots \,
+        q(x)} < \infty.  
+    \]
+\end{proposition}
+\begin{proof}
+    Proof Forthcoming
+\end{proof}
+\begin{proposition}
+    The birth and death chain is positive-recurrent if $\beta < 1$.
+\end{proposition}
+\begin{proof}
+    Let $B$ denote the value
+    \[
+        \sum_{x=1}^{\infty} \frac{p(0)\, p(1)\, p(2)\, \cdots\, p(x-1)}{q(1)\, q(2)\, q(3)\, \cdots \,
+        q(x)}.
+    \]
+    It suffices to show that $B < \infty$. Note that,
+    \[
+        q(x) = 1 - p(x) = \frac{1+x^{-\beta}}{2+x^{-\beta}}.
+    \]
+    Therefore, we can rewrite $B$ as
+    \[
+        B = \sum_{x=1}^{\infty} \frac{2+x^{-\beta}}{(1+1^{-\beta})\, (1+2^{-\beta})\, \cdots \,
+        (1+x^{-\beta})}.  
+    \]
+    Now, we may leverage a useful property of logarithms: that they can "convert" products to sums. In
+    particular, it is true that
+    \[
+        \log\left((1+1^{-\beta})\, (1+2^{-\beta})\, \cdots \, (1+x^{-\beta})\right) = \sum_{i=1}^x
+        \log\left(1+i^{-\beta}\right).
+    \]
+    Further, it is true that for any choice of $\beta$ and for every $i \geq 1$,
+    \[
+        \frac{1}{4} i^{-\beta} \leq \log\left(1+i^{-\beta}\right).
+    \]
+    Thus, we have that
+    \[
+        \log\left((1+1^{-\beta})\, (1+2^{-\beta})\, \cdots \, (1+x^{-\beta})\right) \geq
+        \frac{1}{4}\sum_{i=1}^x i^{-\beta}.
+    \]
+    Let
+    \[
+        s(x) = \sum_{i=1}^x i^{-\beta}.
+    \]
+    We now make the key observation that this sum is a Riemann-sum with rectangular width of $1$
+    approximating the integral of the function $f(i) = i^{-\beta}$. This is to say that
+    \[
+        s(x) \approx \int_1^{x+1} i^{-\beta} \, \d i,
+    \]
+    and that $s(x)$ is the left-endpoint Riemann sum. Notice that $f$ is a strictly decreasing function
+    for positive $i$. As a result, we know that the left-endpoint Riemann sum must be greater than or
+    equal to the value of the appropriate integral, which is to say that
+    \[
+        s(x) \geq \int_1^{x+1} i^{-\beta} \, \d i = \frac{1}{1-\beta}\left((x+1)^{1-\beta} - 1\right).
+    \]
+    Thus, tying this all together---particularly by utilizing the fact that the exponential is an
+    increasing function and thus maintains inequalities---shows that
+    \[
+        \log\left((1+1^{-\beta})\, (1+2^{-\beta})\, \cdots \, (1+x^{-\beta})\right) \geq \exp(s(x)) \geq
+        c \,\exp\left(\frac{(x+1)^{1-\beta}}{1-\beta}\right),
+    \]
+    where
+    \[
+        c = \exp\left(-\frac{1}{1-\beta}\right).  
+    \]
+    Therefore, we can now estimate the value $B$ by noting that
+    \[
+        B \leq \sum_{x=1}^{\infty} \frac{2+x^{-\beta}}{c\,
+        \exp\left(\frac{(x+1)^{1-\beta}}{1-\beta}\right)} \leq \sum_{x=1}^{\infty} \frac{3}{c\,
+        \exp\left(\frac{(x+1)^{1-\beta}}{1-\beta}\right)}.
+    \]
+    Finally, since $0 < \beta < 1$, then the function
+    \[
+        g(x) = \frac{(1+x)^{1-\beta}}{1-\beta}
+    \]
+    is increasing, so that the denominator in the final sum is an exponential of an increasing function.
+    As a result, it can be concluded that
+    \[
+        \sum_{x=1}^{\infty} \frac{3}{c\, \exp\left(\frac{(x+1)^{1-\beta}}{1-\beta}\right)} < \infty,
+    \]
+    which shows that $B$ is finitely-valued. Therefore, when $\beta < 1$, the birth and death chain is
+    positive-recurrent.
+\end{proof}
 
 \section{Chains with Variable Step Size, and an Investigation of Hitting Times}
 Unfortunately, recurrence can only paint so much of the picture of a system's fragility. Particularly,
@@ -221,20 +321,64 @@ Put differently, $h_s(x)$ somehow quantifies how efficiently the chain can move 
 As such, there are a number of quantities of interest involved in the investigation of this particular
 system's fragility:
 \begin{itemize}
-    \item   $h_s(x)$ - the expected amount of time for the chain to hit $0$ from initial position $x$
+    \item   $h_s(x)$ --- the expected amount of time for the chain to hit $0$ from initial position $x$
         under a fixed step size $s$.
-    \item   $\frac{\partial\, h_s(x)}{\partial\, s}$ - the instantaneous change in hitting time to $0$
+    \item   $\frac{\partial\, h_s(x)}{\partial\, s}$ --- the instantaneous change in hitting time to $0$
         with respect to change in the step size $s$. If this is a negative quantity, it is expected
         that increases in step size should increase the efficiency of the chain reaching $0$ from its
         initial position. In contrast, if this is a negative quantity then less efficiency is expected.
-    \item   $\frac{h_s(x)}{x/s}$ - a ratio of the hitting time to $0$ as compared to the minimum number
+    \item   $\frac{h_s(x)}{x/s}$ --- a ratio of the hitting time to $0$ as compared to the minimum number
         of steps required to reach $0$ from initial position $x$.
-    \item   $\frac{h_s(x)}{x}$ - a ratio of the hitting time to $0$ as compared to a "neutral" scenario
+    \item   $\frac{h_s(x)}{x}$ --- a ratio of the hitting time to $0$ as compared to a "neutral" scenario
         in which the expected number of steps to reach $0$ is exactly the position $x$.
 \end{itemize}
 
 I began investigation of hitting times by first looking for a birth and death chain in which the
-expected hitting time $h_s(x) = x$. Doing so involved the following relationship:
+expected hitting time from any $n$ is given by $h_s(n) = n/s$. This is, in some sense, what is expected
+to be the most minimal scenario. Doing so involved the following relationship:
 \[
-    h_s(x) = p(x)(h_s(x) + s) + q(x)(h_s(x) - s),
+    h_s(x) = p(x)(1+h_s(x+s)) + q(x)(1+h_s(x-s)).
 \]
+This can be thought of as saying that the expected hitting time from $x$ is equal to the probability of
+stepping in the positive direction times the associated hitting time, plus the probability of stepping
+in the negative direction times its associated hitting time. However, we also know that the associated
+hitting times should be one more than the hitting times from the new positions, which shows that the
+associated hitting times are $1+h_s(x+s)$ and $1+h_s(x-s)$, respectively. In fact, this holds true for
+all of the random walks considered here, and will be used in further investigation.
+
+Returning now to to the scenario at hand, we can begin to deduce further information about a random walk
+with such a property. By substitution in the given relationship using the expected hitting times, we
+have that
+\begin{align*}
+    \frac{x}{s} &= p(x)\left(1 + \frac{x+s}{s}\right) + q(x)\left(1 + \frac{x-s}{s}\right)\\
+                &= p(x) + q(x) + p(x)\, \frac{x+s}{s} + q(x) \, \frac{x-s}{s} \\
+                &= 1 + p(x)\, \frac{x+s}{s} + q(x) \, \frac{x-s}{s}.
+\end{align*}
+Therefore,
+\begin{align*}
+    x &= s + p(x)(x+s) + q(x)(x-s) \\
+      &= s + p(x)(x+s) + (1-p(x))(x-s) \\
+      &= s + x - s + p(x)(x + s - (x - s)) \\
+      &= x + 2s\, p(x).
+\end{align*}
+Thus, we deduce that $p(x) = 0$ should have this property. In particular, this says that $q(x) = 1$, in
+which case this is the expected result. The random walk that moves in the negative direction with
+probability $1$ should take the minimal amount of time to reach $0$.
+
+This will allow us to make interesting comparisons about other random walks that we investigate. For
+example, it may be interesting to find a random walk where the expected return time has no dependence on
+the size of the step. A reasonable place to begin such investigation is by looking for a chain which
+produces the hitting time $h_s(x) = x$. We begin again by substitution into the starting relationship.
+\begin{align*}
+    x &= p(x)(1 + x + s) + q(x)(1 + x - s) \\
+      &= p(x) + q(x) + p(x)(x+s) + q(x)(x-s) \\
+      &= 1 + p(x)(x+s) + (1-p(x))(x-s) \\
+      &= 1 + x - s + p(x)(x+s - (x - s)) \\
+      &= 1 + x - s + 2s\, p(x).
+\end{align*}
+Thus, we deduce that $s - 1 = 2s\, p(x)$. Therefore we find that
+\[
+    p(x) = \frac{s-1}{2s}.
+\]
+This seemed like a reasonable place to run some new simulations investigating this family of probability
+distributions and their relation to step-size.

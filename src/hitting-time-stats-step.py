@@ -7,7 +7,7 @@ hits = []
 means_hitting_time = []
 stds_hitting_time = []
 
-min_step_size = 1
+min_step_size = 0
 max_step_size = 100
 step_size_increment = 5
 step_sizes = arange(min_step_size, max_step_size, step_size_increment)
