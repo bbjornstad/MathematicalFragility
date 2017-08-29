@@ -44,7 +44,8 @@ and
 \]
 Physically, this should represent that a walker at extremely far distances from the origin cannot see
 it, and so should step either in the positive direction or in the negative direction with probability
-$1/2$.
+$1/2$. We will refer to this birth and death chain as the \emph{power-distributive birth and death
+chain} with parameter $\beta$.
 
 Unfortunately, unlike in the case of stationary Markov chains in which probabilities are independent of
 the position---which usually simplifes analysis---the recurrence properties of this birth and death
@@ -89,17 +90,17 @@ of proof lies beyond statistical inference. As such, I turned my attention towar
 conjucture, using a variety of analytical tools. According to Kobayashi's \emph{Probability, Random
 Processes, and Statistical Analysis}, we mathematically define a recurrent or transient state the
 following way. Begin by defining the \emph{first-passage time} $T_{ij}$ as the number of time steps it
-takes for the chain to transition from state $i$ to state $j$. Then, we let $f_{ij}^{(n)}$ be the
-probability that $T_{ij} = n$; in other words, $f_{ij}^{(n)} = P(T_{ij} = n)$. Thus, the follwing sum
+takes for the chain to transition from state $i$ to state $j$. Then, we let $\rho_{ij}^{(n)}$ be the
+probability that $T_{ij} = n$; in other words, $\rho_{ij}^{(n)} = P(T_{ij} = n)$. Thus, the follwing sum
 \[
-    f_{ij} = \sum_{n=1}^{\infty} f_{ij}^{(n)}  
+    \rho_{ij} = \sum_{n=1}^{\infty} \rho_{ij}^{(n)}  
 \]
 represents the probability that the chain ever starts at state $i$ and transitions to state $j$. Of
-particular importance is the quantity $f_{ii}$, the probability that the chain ever returns to state $i$
+particular importance is the quantity $\rho_{ii}$, the probability that the chain ever returns to state $i$
 after first beginning there. From this, we can classify states.
 \begin{definition}
-    A state $i$ in the state space $\mathcal{S}$ is \emph{transient} if $f_{ii} < 1$ and is
-    \emph{recurrent} if $f_{ii} = 1$.
+    A state $i$ in the state space $\mathcal{S}$ is \emph{transient} if $\rho_{ii} < 1$ and is
+    \emph{recurrent} if $\rho_{ii} = 1$.
 \end{definition}
 However, computation of $f_{ii}$ for any fixed state $i$ proved difficult with the distribution given
 above.  Unfortunately, the position-dependence of $p(x)$ and $q(x)$ make combinatoric approaches highly
@@ -184,7 +185,7 @@ the use of the following fact, from Zhong Li.
 
 Thus, we can prove the following proposition.
 \begin{proposition}
-    The birth and death chain is recurrent.
+    The power-distributive birth and death chain with parameter $\beta$ is recurrent for any $\beta$.
 \end{proposition}
 \begin{proof}
     It suffices to show that the sum
@@ -220,7 +221,8 @@ Further, we draw upon a second of Zhong Li's results:
     Proof Forthcoming
 \end{proof}
 \begin{proposition}
-    The birth and death chain is positive-recurrent if $\beta < 1$.
+    The power-distributive birth and death chain with parameter $\beta$ is positive-recurrent if $\beta
+    < 1$.
 \end{proposition}
 \begin{proof}
     Let $B$ denote the value
