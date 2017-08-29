@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Arch Linux) (preloaded format=xelatex 2017.8.6)  29 AUG 2017 15:38
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Arch Linux) (preloaded format=xelatex 2017.8.6)  29 AUG 2017 16:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2202,12 +2202,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 52384 strings out of 492998
- 1153612 string characters out of 6139962
- 1556630 words of memory out of 5000000
- 55615 multiletter control sequences out of 15000+600000
+ 52385 strings out of 492998
+ 1153625 string characters out of 6139962
+ 1556729 words of memory out of 5000000
+ 55616 multiletter control sequences out of 15000+600000
  590558 words of font info for 96 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  63i,12n,96p,10363b,519s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on docs.xdv (14 pages, 47272 bytes).
+Output written on docs.xdv (14 pages, 47636 bytes).

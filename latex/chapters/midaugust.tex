@@ -44,7 +44,7 @@ and
 \]
 Physically, this should represent that a walker at extremely far distances from the origin cannot see
 it, and so should step either in the positive direction or in the negative direction with probability
-$1/2$. We will refer to this birth and death chain as the \emph{power-distributive birth and death
+$1/2$. We will refer to this birth and death chain as the \emph{power-distributed birth and death
 chain} with parameter $\beta$.
 
 Unfortunately, unlike in the case of stationary Markov chains in which probabilities are independent of
@@ -185,7 +185,7 @@ the use of the following fact, from Zhong Li.
 
 Thus, we can prove the following proposition.
 \begin{proposition}
-    The power-distributive birth and death chain with parameter $\beta$ is recurrent for any $\beta$.
+    The power-distributed birth and death chain with parameter $\beta$ is recurrent for any $\beta$.
 \end{proposition}
 \begin{proof}
     It suffices to show that the sum
@@ -221,7 +221,7 @@ Further, we draw upon a second of Zhong Li's results:
     Proof Forthcoming
 \end{proof}
 \begin{proposition}
-    The power-distributive birth and death chain with parameter $\beta$ is positive-recurrent if $\beta
+    The power-distributed birth and death chain with parameter $\beta$ is positive-recurrent if $\beta
     < 1$.
 \end{proposition}
 \begin{proof}
@@ -338,9 +338,9 @@ system's fragility:
 I began investigation of hitting times by first looking for a birth and death chain in which the
 expected hitting time from any $n$ is given by $h_s(n) = n/s$. This is, in some sense, what is expected
 to be the most minimal scenario. Doing so involved the following relationship:
-\[
+\begin{equation}\label{hittingtime}
     h_s(x) = p(x)(1+h_s(x+s)) + q(x)(1+h_s(x-s)).
-\]
+\end{equation}
 This can be thought of as saying that the expected hitting time from $x$ is equal to the probability of
 stepping in the positive direction times the associated hitting time, plus the probability of stepping
 in the negative direction times its associated hitting time. However, we also know that the associated
@@ -349,7 +349,7 @@ associated hitting times are $1+h_s(x+s)$ and $1+h_s(x-s)$, respectively. In fac
 all of the random walks considered here, and will be used in further investigation.
 
 Returning now to to the scenario at hand, we can begin to deduce further information about a random walk
-with such a property. By substitution in the given relationship using the expected hitting times, we
+with such a property. By substitution into \eqref{hittingtime} using the expected hitting times, we
 have that
 \begin{align*}
     \frac{x}{s} &= p(x)\left(1 + \frac{x+s}{s}\right) + q(x)\left(1 + \frac{x-s}{s}\right)\\
@@ -370,7 +370,7 @@ probability $1$ should take the minimal amount of time to reach $0$.
 This will allow us to make interesting comparisons about other random walks that we investigate. For
 example, it may be interesting to find a random walk where the expected return time has no dependence on
 the size of the step. A reasonable place to begin such investigation is by looking for a chain which
-produces the hitting time $h_s(x) = x$. We begin again by substitution into the starting relationship.
+produces the hitting time $h_s(x) = x$. We begin again by substitution into \eqref{hittingtime}.
 \begin{align*}
     x &= p(x)(1 + x + s) + q(x)(1 + x - s) \\
       &= p(x) + q(x) + p(x)(x+s) + q(x)(x-s) \\
@@ -380,7 +380,7 @@ produces the hitting time $h_s(x) = x$. We begin again by substitution into the 
 \end{align*}
 Thus, we deduce that $s - 1 = 2s\, p(x)$. Therefore we find that
 \[
-    p(x) = \frac{s-1}{2s}.
+    p(x) = \frac{s-1}{2s} = \frac{1}{2} - \frac{1}{2s}.
 \]
 This seemed like a reasonable place to run some new simulations investigating this family of probability
 distributions and their relation to step-size.

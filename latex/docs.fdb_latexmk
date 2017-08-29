@@ -1,9 +1,9 @@
 # Fdb version 3
-["xdvipdfmx"] 1504039126 "docs.xdv" "docs.pdf" "docs" 1504039127
-  "docs.xdv" 1504039126 47272 c84aa015b65cb88cbd4c8b1b9762e396 "xelatex"
+["xdvipdfmx"] 1504040696 "docs.xdv" "docs.pdf" "docs" 1504040697
+  "docs.xdv" 1504040696 47636 599a23966e0384721e0e4dc53728f8ce "xelatex"
   (generated)
   "docs.pdf"
-["xelatex"] 1504039125 "docs.tex" "docs.xdv" "docs" 1504039127
+["xelatex"] 1504040695 "docs.tex" "docs.xdv" "docs" 1504040697
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1501615455 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texmf-dist/fonts/tfm/adobe/avantgar/pagd8t.tfm" 1501615459 7216 ce159066bacd323ac1e4527281f7a233 ""
   "/usr/share/texmf-dist/fonts/tfm/adobe/avantgar/pagk8t.tfm" 1501615459 7340 62d51a8cc96448508dcbcfef0e69f404 ""
@@ -273,11 +273,11 @@
   "/usr/share/texmf-dist/tex/plain/ifetex/ifetex.tex" 1501615464 1166 4b66ad073c6073cb1bde651c18b7dbb2 ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1501615481 32585 d82bbcf7626b7842c87671687479e852 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1502031111 4066383 8af01c244166e9222fda885f4221dd38 ""
-  "chapters/midaugust.tex" 1504039121 21739 6d1adc86994e5a8086d6f89dca55abc6 ""
-  "docs.aux" 1504039126 2784 e12caa894339c206ca34b9bbedc988fe ""
-  "docs.out" 1504039126 311 e8f23bef4b01965bc02d0faa96ac046c ""
+  "chapters/midaugust.tex" 1504040694 21803 aebda4b8d6173b242974f3d3c7c2368d ""
+  "docs.aux" 1504040696 2906 7d4179c67fdabb2551bcfeb68bbdd9a4 ""
+  "docs.out" 1504040696 311 e8f23bef4b01965bc02d0faa96ac046c ""
   "docs.tex" 1504035740 18832 ea2ab0acb7cdf6a2bcf88896482bca50 ""
-  "docs.toc" 1504039126 337 9909b8771ff803ea24b81fe7047dd3ea ""
+  "docs.toc" 1504040696 337 9909b8771ff803ea24b81fe7047dd3ea ""
   "plots/plot1.png" 1502988561 75767 d899f12ff3d5add6c2230dd2372b84d9 ""
   "plots/plot2.png" 1502988595 39252 8517aad574f79d03681fd48aa1aad318 ""
   "resources/cover-render-lines-lowres.png" 1483460122 434194 b15cde001b1ec3d83a7a21cf9a93c5d7 ""
