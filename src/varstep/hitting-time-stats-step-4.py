@@ -12,7 +12,7 @@ stds_hitting_time = []
 
 param = 0.2
 
-min_step_size = 0
+min_step_size = 1
 max_step_size = 200
 step_size_increment = 1
 step_sizes = arange(min_step_size, max_step_size, step_size_increment)
