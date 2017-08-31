@@ -13,7 +13,7 @@ stds_hitting_time = []
 param = 0.2
 
 min_step_size = 0
-max_step_size = 1000
+max_step_size = 200
 step_size_increment = 1
 step_sizes = arange(min_step_size, max_step_size, step_size_increment)
 save('data/step_sizes_{0}'.format(param), step_sizes)
@@ -21,7 +21,7 @@ save('data/step_sizes_{0}'.format(param), step_sizes)
 iterations = 100000
 
 # set some plotting settings
-n_bins = 50
+n_bins = 20
 label_fontsize = 16
 title_fontsize = 20
 
