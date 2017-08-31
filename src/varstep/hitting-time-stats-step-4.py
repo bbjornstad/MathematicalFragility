@@ -10,15 +10,15 @@ hits = []
 means_hitting_time = []
 stds_hitting_time = []
 
-param = 0.05
+param = 0.2
 
 min_step_size = 0
-max_step_size = 3000
+max_step_size = 1000
 step_size_increment = 1
 step_sizes = arange(min_step_size, max_step_size, step_size_increment)
 save('data/step_sizes_{0}'.format(param), step_sizes)
 
-iterations = 10000000
+iterations = 100000
 
 # set some plotting settings
 n_bins = 50
@@ -58,7 +58,7 @@ plt.figure(2)
 plt.plot(step_sizes, stds_hitting_time, 'bo-')
 plt.xlabel('step size', fontsize=label_fontsize)
 plt.ylabel('std of hitting time', fontsize=label_fontsize)
-plt.suptitle('std of hitting time to 0 from 0 given a step size (parameter {0})'.format(param),
+plt.suptitle('STD of hitting time to 0 from 0 given a step size (parameter {0})'.format(param),
         fontsize=title_fontsize)
 
 plt.figure(3)
@@ -66,7 +66,7 @@ plt.hist2d(step_sizes, means_hitting_time, bins = n_bins)
 plt.xlabel('Step size', fontsize=label_fontsize)
 plt.ylabel('Mean hitting time', fontsize=label_fontsize)
 plt.colorbar()
-plt.suptitle('mean hitting time to 0 from 0 given a step size ({0} bins)'.format(n_bins), 
+plt.suptitle('Mean hitting time to 0 from 0 given a step size ({0} bins)'.format(n_bins), 
         fontsize=title_fontsize)
 
 hits = []
@@ -106,7 +106,7 @@ plt.figure(5)
 plt.plot(step_sizes, stds_hitting_time, 'bo-')
 plt.xlabel('step size', fontsize=label_fontsize)
 plt.ylabel('std of hitting time', fontsize=label_fontsize)
-plt.suptitle('std of hitting time to 0 from 100 given a step size (parameter {0})'.format(param),
+plt.suptitle('STD of hitting time to 0 from 100 given a step size (parameter {0})'.format(param),
         fontsize=title_fontsize)
 
 plt.figure(6)
@@ -114,7 +114,7 @@ plt.hist2d(step_sizes, means_hitting_time, bins = n_bins)
 plt.xlabel('Step size', fontsize=label_fontsize)
 plt.ylabel('Mean hitting time', fontsize=label_fontsize)
 plt.colorbar()
-plt.suptitle('mean hitting time to 0 from 100 given a step size ({0} bins)'.format(n_bins), 
+plt.suptitle('Mean hitting time to 0 from 100 given a step size ({0} bins)'.format(n_bins), 
         fontsize=title_fontsize)
 
 hits = []

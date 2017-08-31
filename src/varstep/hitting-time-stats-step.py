@@ -13,12 +13,12 @@ stds_hitting_time = []
 param = 0.5
 
 min_step_size = 0
-max_step_size = 5000
+max_step_size = 3000
 step_size_increment = 1
 step_sizes = arange(min_step_size, max_step_size, step_size_increment)
 save('data/step_sizes_{0}'.format(param), step_sizes)
 
-iterations = 100000000
+iterations = 10000000
 
 # set some plotting settings
 n_bins = 50
