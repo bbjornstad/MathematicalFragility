@@ -28,7 +28,7 @@ class RandomWalk:
             # we have recurred, so record the amount of time it took
             # to do so in the return_times list, and then return to
             # the initial position.
-            if(self.poslist[-1] == 0):
+            if(self.poslist[-1] <= 0):
                 self.hitting_times.append(interval_steps)
                 interval_steps = 0
                 self.curpos = self.init_pos

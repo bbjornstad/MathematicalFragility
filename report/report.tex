@@ -1,0 +1,101 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[style=numeric,citestyle=numeric-comp,backend=bibtex]{biblatex}
+\usepackage{sectsty}
+\usepackage{titlesec}
+\usepackage{amsmath}
+
+\sectionfont{\large}
+
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{2pt plus 2pt minus 2pt}
+
+% \bibliography{references}
+
+\begin{document}
+\section*{What I Did}
+At first, the conception of mathematical fragility seemed quite vague. This was due to relative
+inexperience with probability theory, the underlying mathematical framework that supports the models
+considered here. As a result, it was necessary for me to familiarize myself with the mathematical
+context in which this project was to take place. In particular, I needed a better understanding of
+stochastic models, especially the random walk and Markov chains. To do so, I drew upon Kobayashi, Mark,
+and Turin's \emph{Probability, Random Processes, and Stastical Analysis}. Working through exercises in
+this textbook helped me become more comfortable working with Markov chains, and introduced me to the key
+concepts of recurrence and hitting-times. Further, I applied methods learned in my Analysis classes to
+consider such models in abstract probability spaces.
+
+After I felt sufficiently familiarized with critical concepts, I turned my attention towards
+investigation of some specific probability distributions. To do so, I utilized a subset of Markov chains
+known as Birth and Death chains, where the probability distribution is allowed to vary based on the
+current position. This was a reasonable choice due to the fact that I wanted to model the system of a
+person walking amidst fog concentrated about a specific point, and such fog should have a dependence on
+position. For initial simplicity, I focused on a birth and death chain in which the possible positions
+could be the natural numbers. In the scenario focused on the walker, I also made the assumption that the
+probability should tend towards one-half as he steps further away from the point of interest (in this
+case, the origin). Using these assumptions, I deduced a specific chain of interest, which I denote the
+\emph{power-distributed birth and death chain}, defined by the following probability distribution:
+\[
+    p(n) = \begin{cases}
+        1 & \text{if } n = 0 \\
+        \frac{1}{2+n^{-\beta}} & \text{if } n > 0
+    \end{cases},
+\]
+and $q(n) = 1-p(n)$. Here, $p(n)$ represents the probability of the chain stepping in the positive
+direction, and $q(n)$ is correspondingly the negative. In particular, $\beta$ is a parameter of this
+distribution, and can take positive real values.
+
+In order to investigate interesting behavior of the power-distributed chain, I used Python, equipped with
+the \texttt{NumPy} and \texttt{Matplotlib} libraries to run simulations, collect data, and visualize
+recurrence properties of the power-distributed chain. This helped to further guide my intuitions about
+the behavior of this chain, and thus aided me in analyzing the chain using rigorous mathematical
+methods.
+
+From here, I sought to better conceptualize where might \emph{fragility} falls in relation to the model
+of a birth and death chain on the natural numbers. To do so required investigation of the \emph{hitting
+time} from an initial position---which represents the expected number of steps required to reach zero
+from a given initial point. In some sense, this represents the ``efficiency'' of the system, as it
+quantifies how quickly the probability distribution guides the system to our point of interest. As such,
+I turned my attention again to Python to perform simulations in which a new parameter was introduced to
+the power-distributed chain---step-size. These simulations generated data under a variety of step-sizes,
+initial positions, and values of $\beta$.
+
+However, mathematics requires more than the study of one specific model, and so I began to branch out my
+analytical investigation of hitting times. Using an important known relationship between consecutive
+hitting-times and the probability distribution of an arbitrary birth and death chain, I was able to
+study cases in which the hitting times have special properties. For example, it was natural to question
+the existence of a chain in which the hitting time is simply the initial position.
+
+\section*{What I Learned}
+Throughout my initial investigation of the power-distributed birth and death chain, simulations led me
+to hypothesize that this chain is \emph{positive-recurrent} if $\beta < 1$ and \emph{null-recurrent} if
+$\beta > 1$. This is to say that the power-distributed chain can be expected to return to the origin
+both infinitely often as well as with finite time of return whenever $\beta < 1$. Similarly, the
+power-distributed chain can be expected to return to the origin infinitely often but with infinite time
+of return whenever $\beta > 1$. Drawing upon results from \emph{Probability, Random Processes, and
+Statistical Analysis}, as well as some from Zhong Li, I managed to prove this hypothesis analytically.
+This both solidified my understanding of the behavior of this particular chain, as well as gave me more
+opportunity to use analytic methods in the context of probability-theory.
+
+Similarly, simulations guided my intuition about how the hitting times of power-distributed chain
+respond to perturbations in the step-size. This allowed me to investigate the existence of chains that
+produce interesting hitting-times. Let $h_s(n)$ represent the expected hitting time to zero from initial
+position $n$ under step-size $s$. The following relationship proved critical:
+\[
+    h_s(n) = p(n)(1+h_s(n+s)) + q(n)(1+h_s(n-s)).
+\]
+In particular, I was interested in questions such as: is there a chain with probability distribution
+defined by $p(n)$ so that its associated hitting time is $h_s(n) = n$? What about a similar example
+where $h_s(n) = n/s$?
+
+However, perhaps the most useful aspect of what I have learned throughout this project is a better
+understanding of the processes, habits, and techniques to use when undertaking math research.
+Mathematics research is somewhat special in that it does not require a laboratory, and can be done in
+most circumstances. On the one hand, this provides welcome flexibility and a freedom not afforded by
+other fields, but on the other this necessitates more discipline and persistence. Predicting a timeline
+is especially difficult for mathematics research due to the emphasis on individual work and the high
+level of abstraction. As such, my work on this project has led me to better understand my limits as a
+mathematician---and thus understand where I can improve---as well as developed persistence to keep
+thinking, even if few results are being produced.
+
+\section*{Further Research}
+Section forthcoming.
+\end{document}

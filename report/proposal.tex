@@ -1,0 +1,108 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[style=numeric,citestyle=numeric-comp,backend=bibtex]{biblatex}
+\usepackage{sectsty}
+\usepackage{titlesec}
+
+\sectionfont{\large}
+
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{2pt plus 2pt minus 2pt}
+
+\addbibresource{references.bib}
+
+% \bibliography{references}
+
+\begin{document}
+    \section*{Introduction}
+    Intuitively, the fragility of a system gives an indication of how that system is likely to respond
+    in unstable situations. In economics the concept of fragility as it relates to markets is well
+    studied \cite{anand}. Fragility in general has been developed by Nassim Taleb, who defines it as
+    ``accelerating sensitivity to a harmful stressor'' \cite{taleb2}. Taleb uses this definition to
+    explore his concept of ``antifragility'' \cite{taleb1}. However, a survey of the literature reveals
+    few works apply a general definition of fragility to specific mathematical models. This is where I
+    wish to focus my attention. I intend to formalize a mathematical conception of a system's
+    sensitivity to stressors (error) and determine a mathematically precise definition of fragility by
+    exploring systems of random walks. I conjecture that fragility is a relation between efficiency and
+    error, and in random walks step size represents fragility while the density probability function
+    represents error.
+    
+    \section*{Background}
+    The paradigmatic random walk is the \emph{drunkard's walk}. Imagine that an individual leaves a bar
+    without knowing where he wishes to go, and so instead decides to flip a coin at each intersection.
+    Say the walker begins at 42nd Street. If he flips heads, he will walk to 43rd Street, and if he
+    flips tails, he will instead walk to 41st Street.  At each successive intersection, he will perform
+    the same routine. His path through the city is determined by a sequence of random coin flips
+    \cite{weiss}. This scenario is modeled by a \emph{random walk}. A random walk is at its simplest a
+    sum of a number of random variables \cite{weiss}. Random walks are important objects of study in
+    mathematics due to their ability to model a large class of non-deterministic systems, with
+    applications ranging from physics to the physiology of plants, and are used in economics to model
+    market fluctations \cite{stochastic, ibe}. While the framework of a random walk is relatively
+    simple, the ability to model a diverse range of systems demonstrates their importance. Developing a
+    mathematically precise model of fragility built on systems of random walks is thus developing a
+    precise model of fragility that can be applied to other systems as well.
+    
+    \textbf{Proof vs. Evidence:} In mathematics, a distinction is drawn between evidence and proof.
+    Evidence develops intuitions by providing a sense of what is likely to be true. For example, the
+    data and patterns discovered through some mathematical methods, such as numerical simulation---a
+    tool I will utilize---give an intuition about how a model responds under certain constraints. In
+    order to fully develop a mathematical model, properties must be proved---derived logically from a
+    set of true assumptions. This contrasts other fields in which evidence does not only provide a sense
+    of what is likely to be true, but also the foundation of what is taken to be true. Thus, my
+    mathematical model will be developed in two distinct parts: a phase devoted to developing intuitions
+    about the system through less rigorous processes, followed with a phase devoted to proving intuitive
+    properties of the model in rigorous settings. Numerical simulations will give intuitions, and proofs
+    will give proof.
+
+    \section*{Methodology}
+    I will start by considering a fixed scenario of a one-dimensional random walk with two parameters: a
+    walker steps along a straight line forwards or backwards, hoping to reach the origin. However, the
+    walker's vision is obscured by a ``fog'' of varying density. If the density of the fog is higher,
+    then the walker will be more likely to incorrectly step away from his destination. This model has
+    two parameters that can be varied: the density of the fog, and the size of the walker's steps.
+
+    There are two major questions that I would like to answer through my work. How does the average
+    amount of time required for the walker to reach his destination depend on the function governing the
+    density of the fog? And how does the walker's success in reaching the destination vary with respect
+    to the size of his step? I conjecture that larger step sizes will result in a more ``fragile''
+    system, and that probability density represents the error in the random walk. Thus, if I create a
+    two parameter random walk, where one parameter affects the error rate, and the other affects the
+    fragility of the system, I can investigate how changes in error will affect the system's fragility.
+
+    \textbf{The first four weeks:} I will develop software to numerically estimate the walker's response
+    to changes in these two parameters. I will use the MatLab and Python (equipped with the NumPy
+    library) environments to iteratively simulate the walker under a variety of functions governing
+    probability density. I will explore fogs governed by power decays, exponential decays, logarithmic
+    decays, and other potential decay types. The goal is to find families of probability density
+    functions that provoke interesting responses from the walker, further developing my intuitions about
+    potential properties of this new model of fragility. To do so, I will use tools available in MatLab
+    and the NumPy library to quickly analyze and visualize probability functions and the walker's
+    responses.
+    
+    \textbf{The remaining four weeks:} I will attempt to mathematically prove the patterns that appeared
+    in my numerical experiments. Due to the distinction drawn between intuitions and proofs, I
+    need a mathematically rigorous framework to generate proofs. I will use \emph{analytical}
+    methods---those used in the field of analysis---to prove these intuitive results. A variety of tools
+    may be useful throughout this phase of work. These methods will include established techniques from
+    \emph{Stochastic Analysis}, with emphasis on \emph{Markov Chains} \cite{ibe}. In this phase, I will
+    familiarze myself with Markov Chains through literary review. Then, I will use existing research on
+    \emph{birth and death processes}---which describe ``phenomena where the variation of a random
+    characteristic occurs by discrete jumps''---to frame the random walk as a Markov Chain
+    \cite{stochastic}. I will further leverage existing research on these Markov Chains to estimate
+    \emph{hitting times} for this random walk \cite{stochastic}.
+
+    \textbf{If time permits:} I expect that these two phases will span a total of eight weeks. However,
+    if possible, I will try to generalize my one-dimensional model to higher dimensional spaces.
+    Typically generalizations to higher dimensions prove difficult but also enlighten nuances not
+    encountered in lower dimensions.
+
+    \section*{Qualifications}
+    I am a Mathematics and Computer Science double major as well as an ISP student, and on conclusion of
+    the current academic year, I will have completed the MENU undergraduate sequence in Analysis. This
+    provides my foundation for proof based research, and my experience with computer science will
+    provide me the necessary knowledge to perform numerical simulations. I spent the Summer of 2016
+    developing an analysis pipeline for use with large sets of genetic data in the R programming
+    environment. Since I intend to purse a career in academia, this project will be a valuable learning
+    experience for both my mathematical knowledge and my future academic goals.
+
+    \printbibliography
+\end{document}
