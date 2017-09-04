@@ -11,8 +11,7 @@ reference = [1 for s in step_sizes]
 
 # calculate the ratios
 means_ratio = [[ m/(init_pos/s) for m,s in zip(ms, step_sizes) ] for ms in means]
-means_ratio = map((lambda m, s: m/(init_pos/s)), means, step_sizes)
-stds_ratio = map((lambda m, s: m/(init_pos/s)), stds, step_sizes)
+stds_ratio = [[ v/(init_pos/s) for v,s in zip(ss, step_sizes) ] for ss in stds]
 
 # set some plotting settings
 title_fontsize = 14
@@ -36,7 +35,7 @@ for splot in m_splots:
     splot.set_xlabel('Step size', fontsize=label_fontsize)
     splot.set_ylabel('Mean hitting time', fontsize=label_fontsize)
     splot.tick_params(axis='both', labelsize=axis_fontsize)
-    splot.set_ybound(0,25)
+    splot.set_ybound(0,200)
 m_splots[0].set_title(r'$\beta < 1$', fontsize=label_fontsize)
 m_splots[1].set_title(r'$\beta \geq 1$', fontsize=label_fontsize)
 
@@ -59,7 +58,7 @@ for splot in s_splots:
     splot.set_xlabel('Step size', fontsize=label_fontsize)
     splot.set_ylabel('STD of hitting time', fontsize=label_fontsize)
     splot.tick_params(axis='both', labelsize=axis_fontsize)
-    splot.set_ybound(0,25)
+    splot.set_ybound(0,200)
 s_splots[0].set_title(r'$\beta < 1$', fontsize=label_fontsize)
 s_splots[1].set_title(r'$\beta \geq 1$', fontsize=label_fontsize)
 
