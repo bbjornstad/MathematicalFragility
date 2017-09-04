@@ -35,7 +35,7 @@ for splot in m_splots:
     splot.set_xlabel('Step size', fontsize=label_fontsize)
     splot.set_ylabel('Mean hitting time', fontsize=label_fontsize)
     splot.tick_params(axis='both', labelsize=axis_fontsize)
-    splot.set_ybound(0,500)
+    splot.set_ybound(0,25)
 m_splots[0].set_title(r'$\beta < 1$', fontsize=label_fontsize)
 m_splots[1].set_title(r'$\beta \geq 1$', fontsize=label_fontsize)
 
@@ -58,7 +58,7 @@ for splot in s_splots:
     splot.set_xlabel('Step size', fontsize=label_fontsize)
     splot.set_ylabel('STD of hitting time', fontsize=label_fontsize)
     splot.tick_params(axis='both', labelsize=axis_fontsize)
-    splot.set_ybound(0,500)
+    splot.set_ybound(0,25)
 s_splots[0].set_title(r'$\beta < 1$', fontsize=label_fontsize)
 s_splots[1].set_title(r'$\beta \geq 1$', fontsize=label_fontsize)
 
