@@ -12,88 +12,94 @@
 % \bibliography{references}
 
 \begin{document}
-\section*{What I Did}
-At first, the conception of mathematical fragility seemed quite vague. This was due to relative
-inexperience with probability theory, the underlying mathematical framework that supports the models
-considered here. As a result, it was necessary for me to familiarize myself with the mathematical
-context in which this project was to take place. In particular, I needed a better understanding of
-stochastic models, especially the random walk and Markov chains. To do so, I drew upon Kobayashi, Mark,
-and Turin's \emph{Probability, Random Processes, and Stastical Analysis}. Working through exercises in
-this textbook helped me become more comfortable working with Markov chains, and introduced me to the key
-concepts of recurrence and hitting-times. Further, I applied methods learned in my Analysis classes to
-consider such models in abstract probability spaces.
+\section*{Introduction}
+Fragility describes how a system is likely to respond to small perturbations to its parameters. However,
+there currently is no quantification of fragility. Thus, its utility is limited. Throughout this project
+I investigated the existence of a mathematical quantity that best captures the intuitions of fragility.
+To do so, I considered stochastic models such as birth and death chains that have the potential to
+describe a variety of scenarios, such as market fluctuations. Making heavy use of computer simulation to
+guide my intuition, I explored the mathematical properties of a number of specific birth and death
+chains through analytical methods.
 
-After I felt sufficiently familiarized with critical concepts, I turned my attention towards
-investigation of some specific probability distributions. To do so, I utilized a subset of Markov chains
-known as Birth and Death chains, where the probability distribution is allowed to vary based on the
-current position. This was a reasonable choice due to the fact that I wanted to model the system of a
-person walking amidst fog concentrated about a specific point, and such fog should have a dependence on
-position. For initial simplicity, I focused on a birth and death chain in which the possible positions
-could be the natural numbers. In the scenario focused on the walker, I also made the assumption that the
-probability should tend towards one-half as he steps further away from the point of interest (in this
-case, the origin). Using these assumptions, I deduced a specific chain of interest, which I denote the
-\emph{power-distributed birth and death chain}, defined by the following probability distribution:
+\section*{Project Phases}
+\noindent
+\textbf{Mathematical Context:} At first, the conception of mathematical fragility seemed quite vague.
+This was due to my inexperience with probability theory, the framework that supports the models
+considered here. I needed a better understanding of the context, especially stochastic models. I worked
+through exercises and referred to a number of textbooks, introducing myself to the key concepts of
+recurrence and hitting-time. This took longer than originally expected, yet proved critically important
+as I would have been left without the appropriate language or definitions necessary to consider birth
+and death chains.
+
+\noindent
+\textbf{Initial Simulations:} I next turned my attention towards some specific probability
+distributions. In particular, I needed to develop my intuitions about birth and death chains, and the
+property of recurrence---which describes the chain's potential to return to a certain point. To do so, I
+used Python with the \texttt{NumPy} and \texttt{Matplotlib} libraries to simulate birth and death chains
+defined by various probability distributions, and analyze and plot recurrence times to $0$. I have
+previous experience doing similar forms of data analysis, and found that this came naturally to me.
+However, I found it challenging to set appropriate parameters for each simulation---too many data points
+causes simulations to run unnecessarily long, but too few (or poor sampling technique) produces
+inconclusive results. This phase was particularly guiding as I learned techniques that can be used to
+quickly investigate hypotheses.
+
+In particular, my first simulations led me to define the \emph{power-distributed chain} with parameter
+$\beta$, whose behavior is governed by the probability $p(n)$ and $q(n)$, where $p(n)$ represents the
+probability of the chain transitioning in the positive direction, and $q(n)$ the negative. This chain is
+defined by
 \[
     p(n) = \begin{cases}
         1 & \text{if } n = 0 \\
         \frac{1}{2+n^{-\beta}} & \text{if } n > 0
-    \end{cases},
+    \end{cases}, \quad \quad
+    q(n) = 1-p(n).
 \]
-and $q(n) = 1-p(n)$. Here, $p(n)$ represents the probability of the chain stepping in the positive
-direction, and $q(n)$ is correspondingly the negative. In particular, $\beta$ is a parameter of this
-distribution, and can take positive real values.
+I hypothesized that the power-distributed chain is \emph{positive recurrent}---i.e. returns to $0$
+infinitely often and in finite expected time---if $\beta < 1$, and is \emph{null recurrent}---i.e.
+returns to $0$ infinitely often but with infinite expected return time---if $\beta \geq 1$. Simulations
+allowed me to compare recurrence times over $\beta$ values and the results supported my hypothesis.
 
-In order to investigate interesting behavior of the power-distributed chain, I used Python, equipped with
-the \texttt{NumPy} and \texttt{Matplotlib} libraries to run simulations, collect data, and visualize
-recurrence properties of the power-distributed chain. This helped to further guide my intuitions about
-the behavior of this chain, and thus aided me in analyzing the chain using rigorous mathematical
-methods.
+\noindent
+\textbf{Analytic Proof:} In mathematics, however, numerical results from simulation do not constitute
+sufficient evidence. As such, I turned to analytic methods to prove my conjecture about the
+power-distributed chain. While I drew from a number of established results in my attempts at proof, I
+remained challenged by the range of techniques that I utilized to establish convergence properties of
+important sums. I often became frustrated if I felt like I was working in circles, and as such this
+phase required my persistence as a mathematician. However, I was able to make some key observations that
+allowed me to succeed in proving my conjecture. Overall, the time spent here feels too long for the
+results established, but it challenged both my mathematical ability and my perserverance.
 
-From here, I sought to better conceptualize where might \emph{fragility} falls in relation to the model
-of a birth and death chain on the natural numbers. To do so required investigation of the \emph{hitting
-time} from an initial position---which represents the expected number of steps required to reach zero
-from a given initial point. In some sense, this represents the ``efficiency'' of the system, as it
-quantifies how quickly the probability distribution guides the system to our point of interest. As such,
-I turned my attention again to Python to perform simulations in which a new parameter was introduced to
-the power-distributed chain---step-size. These simulations generated data under a variety of step-sizes,
-initial positions, and values of $\beta$.
+\noindent
+\textbf{The Right Question:} Through my analytic investigation of the power-distributed birth and death
+chain, I had to consider if recurrence properties offered the best information, or if other properties
+about birth and death chains would be more enlightening. This led me to consider the more general
+\emph{hitting time}---the expected number of steps for a chain in a particular state to reach a
+different state. Hitting times are more general than recurrence times and better represent a system's
+``efficiency'' in reaching a particular state, while recurrence times are a more direct representation
+of whether a system frequently ``gets lost.'' These considerations refined my conceptions about how
+these quantities relate to the physical behavior of a chain.
 
-However, mathematics requires more than the study of one specific model, and so I began to branch out my
-analytical investigation of hitting times. Using an important known relationship between consecutive
-hitting-times and the probability distribution of an arbitrary birth and death chain, I was able to
-study cases in which the hitting times have special properties. For example, it was natural to question
-the existence of a chain in which the hitting time is simply the initial position.
+\noindent
+\textbf{Exploration of Hitting Times:} As a reasonable starting point, I considered the behavior of
+hitting times under variations in step-size. Thus, I was investigating the quantity $h_s(n)$, the
+expected hitting time to $0$ from position $n$ with step size $s$. Unfortunately, I expected calculation
+of hitting times to be far too difficult, and so had to investigate using alternative methods. I
+returned to simulations, updating the necessary parameters to instead vary the step-size of the
+power-distrbuted chain. This helped enlighten quantities of particular interest, such as $\partial\, h/
+\partial\, s$, the change in hitting time with respect to step-size. I believe that these quantities
+hold important information about the fragility of a system.
 
-\section*{What I Learned}
-Throughout my initial investigation of the power-distributed birth and death chain, simulations led me
-to hypothesize that this chain is \emph{positive-recurrent} if $\beta < 1$ and \emph{null-recurrent} if
-$\beta > 1$. This is to say that the power-distributed chain can be expected to return to the origin
-both infinitely often as well as with finite time of return whenever $\beta < 1$. Similarly, the
-power-distributed chain can be expected to return to the origin infinitely often but with infinite time
-of return whenever $\beta > 1$. Using established results, I proved this hypotheses. (Insert personal
-reflections here).
 
-Similarly, simulations guided my intuition about how the hitting times of power-distributed chain
-respond to perturbations in the step-size. This allowed me to investigate the existence of chains that
-produce interesting hitting-times. Let $h_s(n)$ represent the expected hitting time to zero from initial
-position $n$ under step-size $s$. The following relationship proved critical:
-\[
-    h_s(n) = p(n)(1+h_s(n+s)) + q(n)(1+h_s(n-s)).
-\]
-In particular, I was interested in questions such as: is there a chain with probability distribution
-defined by $p(n)$ so that its associated hitting time is $h_s(n) = n$? What about a similar example
-where $h_s(n) = n/s$?
-
-However, perhaps the most useful aspect of what I have learned throughout this project is a better
-understanding of the processes, habits, and techniques to use when undertaking math research.
-Mathematics research is somewhat special in that it does not require a laboratory, and can be done in
-most circumstances. On the one hand, this provides welcome flexibility and a freedom not afforded by
-other fields, but on the other this necessitates more discipline and persistence. Predicting a timeline
-is especially difficult for mathematics research due to the emphasis on individual work and the high
-level of abstraction. As such, my work on this project has led me to better understand my limits as a
-mathematician---and thus understand where I can improve---as well as developed persistence to keep
-thinking, even if few results are being produced.
 
 \section*{Further Research}
-Section forthcoming.
+
+\section*{Final Thoughts}
+Above all, this project helped me to better understand my strengths and limits as a mathematician. It
+allowed me the invaluable opportunity to experience research early in my career. Math research, due to
+the emphasis on abstraction, is difficult to predict, and this project required that I persist even when
+I felt behind schedule or lacking in ideas. Further, this project tested the limits of my mathematical
+creatitivity, an invaluable tool that I will surely use in future work and one that has been
+significantly improved due to my work here. I would like to thank the Office of Undergraduate Research
+for allowing me this opportunity as well as Jason Siefken for his incredible mentorship and support
+throughout this project, even when separated by great distances.
 \end{document}
