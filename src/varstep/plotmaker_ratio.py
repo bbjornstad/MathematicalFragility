@@ -10,6 +10,7 @@ step_sizes = load('data/step_sizes.npy')
 reference = [1 for s in step_sizes]
 
 # calculate the ratios
+means_ratio = [[ m/(init_pos/s) for m,s in zip(ms, step_sizes) ] for ms in means]
 means_ratio = map((lambda m, s: m/(init_pos/s)), means, step_sizes)
 stds_ratio = map((lambda m, s: m/(init_pos/s)), stds, step_sizes)
 
