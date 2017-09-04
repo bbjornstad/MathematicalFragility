@@ -65,4 +65,4 @@ std_fig.suptitle(r'STD of hitting time from {0} as a ratio of $x/s$'.format(init
 
 # save
 mean_fig.savefig('plots/from_{0}_means_ratio.jpg'.format(init_pos))
-std_fig.savefig('plots/stds_from_{0}_stds_ratio.jpg'.format(init_pos))
+std_fig.savefig('plots/from_{0}_stds_ratio.jpg'.format(init_pos))
