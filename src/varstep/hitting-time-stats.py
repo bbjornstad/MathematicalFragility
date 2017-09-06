@@ -14,13 +14,14 @@ step_size_increment = 1
 step_sizes = arange(min_step_size, max_step_size, step_size_increment)
 save('data/step_sizes', step_sizes)
 
-max_beta = 2
+min_beta = -0.4
+max_beta = 0.4
 beta_step = 0.2
-beta_vals = arange(beta_step, max_beta, beta_step)
+beta_vals = arange(min_beta, max_beta+beta_step, beta_step)
 save('data/beta_vals', beta_vals)
 
-iterations = 100000
-init_pos = 1000
+iterations = 1000000
+init_pos = 100
 
 for beta in beta_vals:
     cur_means = []

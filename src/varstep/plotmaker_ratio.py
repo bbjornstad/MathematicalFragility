@@ -10,8 +10,8 @@ step_sizes = load('data/step_sizes.npy')
 reference = [1 for s in step_sizes]
 
 # calculate the ratios
-means_ratio = [[ m/(init_pos/s) for m,s in zip(ms, step_sizes) ] for ms in means]
-stds_ratio = [[ v/(init_pos/s) for v,s in zip(ss, step_sizes) ] for ss in stds]
+means_ratio = [[ m/(init_pos/s**2) for m,s in zip(ms, step_sizes) ] for ms in means]
+stds_ratio = [[ v/(init_pos/s**2) for v,s in zip(ss, step_sizes) ] for ss in stds]
 
 # set some plotting settings
 title_fontsize = 14
