@@ -51,15 +51,16 @@ $q(n)$ the negative. These functions are defined by
     q(n) = 1-p(n).
 \]
 I hypothesized that the power-distributed chain is \emph{positive recurrent} (i.e. returns to zero
-infinitely often and with finite expected time) if $\beta < 1$, and is \emph{null recurrent} (i.e.
-returns to $0$ infinitely often but with infinite expected return time) if $\beta \geq 1$. Simulations
-allowed me to compare return times and values of $\beta$. The simulation supported my hypothesis.
+infinitely often and within finite expected return time) if $\beta < 1$, and is \emph{null recurrent}
+(i.e.  returns to $0$ infinitely often but with infinite expected return time) if $\beta > 1$.
+Simulations allowed me to compare return times and values of $\beta$. The simulation supported my
+hypothesis.
 
 \noindent
 \textbf{Analytic Proof:} In mathematics, however, numerical results from simulation do not constitute
 sufficient evidence. As such, I turned to analytic methods to prove my conjecture about the
-power-distributed chain. While I drew upon established results to prove that some infinite sums
-converge, I needed to be creative with how I applied approximations. I often became frustrated feeling
+power-distributed chain. While I drew upon established results to prove that a particular infinite sum
+converge, I needed to be creative with how I applied approximations. I often became frustrated,feeling
 like I was working in circles. Completing this phase required my persistence as a mathematician.
 Eventually, I was able to make some key observations that allowed me to succeed in proving my
 conjecture.  Overall, the time spent here felt too long for the results established, but it challenged
@@ -70,34 +71,32 @@ and death chain, I had to consider if recurrence properties offered the best inf
 properties about birth and death chains would be more enlightening. This led me to consider the more
 general \emph{mean hitting time}: the expected number of steps for a chain in a particular state to
 reach a different state. Mean hitting times are more general than return times and better represent
-a system's ``efficiency'' in reaching a particular state, while recurrence times are a more direct
+a system's ``efficiency'' in reaching a particular state, while return times are a more direct
 representation of whether a system frequently ``gets lost.'' I am still unsure that mean hitting times
 are the best object of study.
 
 \noindent
 \textbf{Exploration of Hitting Times:} Let $h_s(n)$ be the expected hitting time to $0$ from position
-$n$ with step size $s$. I was advised that calculating hitting times was difficult and so investigated
-using alternative methods. I returned to simulations, updating the necessary parameters to instead vary
-the step size of the power-distrbuted chain. This showed me how quantities of interest, such as
-$\partial\, h/ \partial\, s$, vary with respect to step size. I believe that these quantities can be
-used to classify the fragility of a random walk.
+$n$ with step size $s$. I was advised calculating hitting times was difficult and so used numerical
+methods. I updated my simulation to instead vary the step size of the power-distrbuted chain. This
+showed me how quantities of interest, such as $\partial\, h/ \partial\, s$, vary with respect to step
+size. I believe that these quantities can be used to classify the fragility of a random walk.
 
 
 \section*{Further Research}
-More investigation of hitting times of the power-distributed chain remains to be done. The results I
-have gathered so far show that the hitting time of the power-distributed chain decreases with changes in
-step size. Further, simulations also reveal sequences of step sizes where the mean hitting time
-instantaneously drops. I suspect that these sequences are closely related to the division algorithm, and
-analysis of these sequences may give information about the shape of hitting time functions.
+The results I have gathered so far show that the hitting time of the power-distributed chain decreases
+as step size increases. Further, simulations also reveal sequences of step sizes where the mean hitting
+time instantaneously drops. I suspect that these sequences are closely related to the division
+algorithm, and analysis of these sequences may give information about the shape of hitting time
+functions.
 
-However, many choices of transition probabilities lead to markov chains with infinite mean hitting
+Additionally, many choices of transition probabilities lead to markov chains with infinite mean hitting
 times. Thus, mean hitting times cannot be used to compare these chains. Hitting times give good
-information in the case of the power-distributed chain but this will not generalize to chains with
-different transition probabilities. Instead, I would like to investigate another quantity: the
-probability that the chain reaches a particular point. This would allow comparison of chains with
+information in the case of the power-distributed chain when $\beta < 1$, but this does not generalize to
+chains with different transition probabilities. Instead, I would like to investigate another quantity:
+the probability that the chain reaches a particular point. This would allow comparison of chains with
 infinite mean hitting times, as this probability is well-defined even for chains with infinite mean
-hitting times. This generalization is critical to developing a complete conception of mathematical
-fragility.
+hitting times.
 
 
 \section*{Final Thoughts}
