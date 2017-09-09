@@ -85,18 +85,17 @@ size. I believe that these quantities can be used to classify the fragility of a
 
 \section*{Further Research}
 The results I have gathered so far show that the hitting time of the power-distributed chain decreases
-as step size increases. Further, simulations also reveal sequences of step sizes where the mean hitting
+as step size increases. Further, simulations also reveal subsets of step sizes where the mean hitting
 time instantaneously drops. I suspect that these sequences are closely related to the division
-algorithm, and analysis of these sequences may give information about the shape of hitting time
+algorithm, and an analysis of these sequences may give information about the shape of hitting time
 functions.
 
 Additionally, many choices of transition probabilities lead to markov chains with infinite mean hitting
-times. Thus, mean hitting times cannot be used to compare these chains. Hitting times give good
-information in the case of the power-distributed chain when $\beta < 1$, but this does not generalize to
-chains with different transition probabilities. Instead, I would like to investigate another quantity:
-the probability that the chain reaches a particular point. This would allow comparison of chains with
-infinite mean hitting times, as this probability is well-defined even for chains with infinite mean
-hitting times.
+times. Thus, mean hitting times cannot be used to compare these chains (for example, mean hitting times
+cannot compare the power-distributed chain when $\beta > 1$). As such, mean hitting times do not
+generalize to chains with different transition probabilities. Instead, I would like to investigate
+another quantity: the probability that the chain reaches a particular point. This quantity is always
+well defined, and would allow comparison of chains with infinite mean hitting times.
 
 
 \section*{Final Thoughts}
