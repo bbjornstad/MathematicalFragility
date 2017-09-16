@@ -8,9 +8,9 @@ from numpy import mean, std, arange, save
 means_hitting_time = []
 stds_hitting_time = []
 
-min_step_size = 1
-max_step_size = 100
-step_size_increment = 1
+min_step_size = 5
+max_step_size = 2500
+step_size_increment = 5
 step_sizes = arange(min_step_size, max_step_size, step_size_increment)
 save('data/step_sizes', step_sizes)
 
@@ -21,7 +21,7 @@ beta_vals = arange(min_beta, max_beta+beta_step, beta_step)
 save('data/beta_vals', beta_vals)
 
 iterations = 1000000
-init_pos = 100
+init_pos = 1000
 
 for beta in beta_vals:
     cur_means = []

@@ -1,4 +1,5 @@
 \select@language {english}
-\contentsline {chapter}{\chapternumberline {1}Project Update - Mid August}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Birth and Death Chains: Recurrence}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}Chains with Variable Step Size, and an Investigation of Hitting Times}{8}{section.1.2}
+\contentsline {chapter}{\chapternumberline {1}Introduction and Mathematical Context}{1}{chapter.1}
+\contentsline {chapter}{\chapternumberline {2}Recurrence of Birth and Death Chains}{3}{chapter.2}
+\contentsline {chapter}{\chapternumberline {3}Hitting Times of Birth and Death Chains}{11}{chapter.3}
+\contentsline {chapter}{\chapternumberline {4}Further Research}{17}{chapter.4}
